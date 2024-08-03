@@ -83,13 +83,19 @@
                         <p class="text-center">Area = Base X Height</p>
                         <!-- input fields here  -->
                         <div class="flex">
-                            <input class="w-20 p-2 border-2 rounded-md" type="text" placeholder="Base">
+                            <input id="parallelogram-base" class="w-20 p-2 border-2 rounded-md" type="text"
+                                placeholder="Base">
                             <span class="mt-2 ml-2 mr-2 text-center">cm</span>
-                            <input class="w-20 p-2 border-2 rounded-md" type="text" placeholder=" Height">
+                            <input id="parallelogram-height" class="w-20 p-2 border-2 rounded-md" type="text"
+                                placeholder=" Height">
                             <span class="mt-2 ml-2 text-center">cm</span>
                         </div>
+                        <div>
+                            <p class="font-semibold">Area: <span id="parallelogram-area"></span> cm<sup>2</sup></p>
+                        </div>
                         <div class="card-actions justify-end">
-                            <button class="btn btn-primary w-full">Calculate</button>
+                            <button onclick="parallelogramAreaCalculation()"
+                                class="btn btn-primary w-full">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -163,6 +169,7 @@
 
     <script src="scripts/triangleArea.js"></script>
     <script src="scripts/rectangleaArea.js"></script>
+    <script src="scripts/parallelogramArea.js"></script>
 </body>
 
 </html>
