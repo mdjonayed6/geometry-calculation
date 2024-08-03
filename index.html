@@ -57,13 +57,19 @@
                         <p class="text-center">Area = Width X Length</p>
                         <!-- input fields here  -->
                         <div class="flex">
-                            <input class="w-20 p-2 border-2 rounded-md" type="text" placeholder="Width">
+                            <input id="rectangle-width" class="w-20 p-2 border-2 rounded-md" type="text"
+                                placeholder="Width">
                             <span class="mt-2 ml-2 mr-2 text-center">cm</span>
-                            <input class="w-20 p-2 border-2 rounded-md" type="text" placeholder=" Length">
+                            <input id="rectangle-length" class="w-20 p-2 border-2 rounded-md" type="text"
+                                placeholder=" Length">
                             <span class="mt-2 ml-2 text-center">cm</span>
                         </div>
+                        <div>
+                            <p class="font-semibold">Area: <span id="rectangle-area"></span> cm<sup>2</sup></p>
+                        </div>
                         <div class="card-actions justify-end">
-                            <button class="btn btn-primary w-full">Calculate</button>
+                            <button onclick="rectangleAreaCalculation()"
+                                class="btn btn-primary w-full">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -156,6 +162,7 @@
     </main>
 
     <script src="scripts/triangleArea.js"></script>
+    <script src="scripts/rectangleaArea.js"></script>
 </body>
 
 </html>
