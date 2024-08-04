@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geometry Calculation</title>
     <!-- Tailwind and Daisy UI Link  -->
+    <link rel="shortcut icon" href="images/fav-icon.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -72,7 +73,7 @@
                             <span class="mt-2 ml-2 text-center">cm</span>
                         </div>
                         <div>
-                            <p class="font-semibold">Area: <span id="triangle-area"></span> cm<sup>2</sup></p>
+                            <p class="font-semibold">Area: <span id="triangle-area">0</span> cm<sup>2</sup></p>
                         </div>
                         <div class="card-actions justify-end">
                             <button onclick="triangleAreaCalculation()"
@@ -98,7 +99,7 @@
                             <span class="mt-2 ml-2 text-center">cm</span>
                         </div>
                         <div>
-                            <p class="font-semibold">Area: <span id="rectangle-area"></span> cm<sup>2</sup></p>
+                            <p class="font-semibold">Area: <span id="rectangle-area">0</span> cm<sup>2</sup></p>
                         </div>
                         <div class="card-actions justify-end">
                             <button onclick="rectangleAreaCalculation()"
@@ -124,7 +125,7 @@
                             <span class="mt-2 ml-2 text-center">cm</span>
                         </div>
                         <div>
-                            <p class="font-semibold">Area: <span id="parallelogram-area"></span> cm<sup>2</sup></p>
+                            <p class="font-semibold">Area: <span id="parallelogram-area">0</span> cm<sup>2</sup></p>
                         </div>
                         <div class="card-actions justify-end">
                             <button onclick="parallelogramAreaCalculation()"
@@ -167,9 +168,11 @@
                         <p class="text-center">Area: 0.5 X P X B</p>
                         <!-- input fields here  -->
                         <div class="flex">
-                            <input id="pentagon-p-value" class="w-20 p-2 border-2 rounded-md flex justify-center" type="text" placeholder="p">
+                            <input id="pentagon-p-value" class="w-20 p-2 border-2 rounded-md flex justify-center"
+                                type="text" placeholder="p">
                             <span class="mt-2 ml-2 mr-2 text-center">cm</span>
-                            <input id="pentagon-b-value" class="w-20 p-2 border-2 rounded-md" type="text" placeholder=" b">
+                            <input id="pentagon-b-value" class="w-20 p-2 border-2 rounded-md" type="text"
+                                placeholder=" b">
                             <span class="mt-2 ml-2 text-center">cm</span>
                         </div>
                         <div>
@@ -190,13 +193,18 @@
                         <p class="text-center">Area = 3.1416 * a * b</p>
                         <!-- input fields here  -->
                         <div class="flex">
-                            <input class="w-20 p-2 border-2 rounded-md" type="text" placeholder="a">
+                            <input id="ellipse-a-value" class="w-20 p-2 border-2 rounded-md" type="text"
+                                placeholder="a">
                             <span class="mt-2 ml-2 mr-2 text-center">cm</span>
-                            <input class="w-20 p-2 border-2 rounded-md" type="text" placeholder=" b">
+                            <input id="ellipse-b-value" class="w-20 p-2 border-2 rounded-md" type="text"
+                                placeholder=" b">
                             <span class="mt-2 ml-2 text-center">cm</span>
                         </div>
+                        <div>
+                            <p class="font-semibold">Area: <span id="ellipse-span">0</span> cm<sup>2</sup></p>
+                        </div>
                         <div class="card-actions justify-end">
-                            <button class="btn btn-primary w-full">Calculate</button>
+                            <button onclick="calculateEllipseArea()" class="btn btn-primary w-full">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -253,6 +261,7 @@
     <script src="scripts/parallelogramArea.js"></script>
     <script src="scripts/rombusArea.js"></script>
     <script src="scripts/pentagonArea.js"></script>
+    <script src="scripts/ellipsArea.js"></script>
 </body>
 
 </html>
