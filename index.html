@@ -142,13 +142,16 @@
                         <p class="text-center">Area: 0.5 X d<sub>1</sub> X d<sub>2</sub></p>
                         <!-- input fields here  -->
                         <div class="flex">
-                            <input class="w-20 p-2 border-2 rounded-md" type="text" placeholder="d1">
+                            <input id="rhombus-d1-value" class="w-20 p-2 border-2 rounded-md" type="text" placeholder="d1">
                             <span class="mt-2 ml-2 mr-2 text-center">cm</span>
-                            <input class="w-20 p-2 border-2 rounded-md" type="text" placeholder=" d2">
+                            <input id="rhombus-d2-value" class="w-20 p-2 border-2 rounded-md" type="text" placeholder=" d2">
                             <span class="mt-2 ml-2 text-center">cm</span>
                         </div>
+                        <div>
+                            <p class="font-semibold">Area: <span id="rhombus-span">0</span> cm<sup>2</sup></p>
+                        </div>
                         <div class="card-actions justify-end">
-                            <button class="btn btn-primary w-full">Calculate</button>
+                            <button onclick="calculateRhombusArea()" class="btn btn-primary w-full">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -238,9 +241,12 @@
             </a>
         </nav>
     </footer>
+
+
     <script src="scripts/triangleArea.js"></script>
     <script src="scripts/rectangleaArea.js"></script>
     <script src="scripts/parallelogramArea.js"></script>
+    <script src="scripts/rombusArea.js"></script>
 </body>
 
 </html>
